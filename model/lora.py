@@ -18,10 +18,13 @@ class LoRA(nn.Module):
         # Define the low-rank matrices A and B
         # And initialize A with normal distribution with mean 0 and std 0.02, and B with zeros
         # Write your code here
+        self.A = nn.Parameter(torch.normal(0, 0.02, (rank, in_features)))
+        self.B = nn.Parameter(torch.zeros((out_features, rank)))
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         """Forward pass through the LoRA module."""
         # Write your code here
+        return x + F.linear(x, torch.mm(self.B, self.A))
 
 
 def apply_lora(model: nn.Module, rank: int = 16):
