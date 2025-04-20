@@ -24,7 +24,7 @@ class LoRA(nn.Module):
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         """Forward pass through the LoRA module."""
         # Write your code here
-        return x + F.linear(x, torch.mm(self.B, self.A))
+        return x + nn.functional.linear(x, torch.mm(self.B, self.A))
 
 
 def apply_lora(model: nn.Module, rank: int = 16):
