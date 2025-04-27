@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="root@region-9.autodl.pro:54254" remoteFilesAllowedToDisappearOnAutoupload="false">
+  <component name="PublishConfigData" serverName="root@region-9.autodl.pro:41915" remoteFilesAllowedToDisappearOnAutoupload="false">
     <serverData>
-      <paths name="root@region-9.autodl.pro:54254">
+      <paths name="root@region-9.autodl.pro:41915">
         <serverdata>
           <mappings>
-            <mapping deploy="/root/autodl-tmp/COMP7607B-A2" local="$PROJECT_DIR$" />
+            <mapping deploy="/root/autodl-tmp/COMP7607B-A2" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>

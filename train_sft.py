@@ -15,15 +15,15 @@ def parse_args():
     parser.add_argument("--temperature", default=0.85, type=float)
     parser.add_argument("--top_p", default=0.85, type=float)
     parser.add_argument("--epochs", type=int, default=1)
-    parser.add_argument("--batch_size", type=int, default=32)
-    parser.add_argument("--learning_rate", type=float, default=5e-5)
+    parser.add_argument("--batch_size", type=int, default=16) #32
+    parser.add_argument("--learning_rate", type=float, default=1e-5) #5e-5
     parser.add_argument("--device", type=str, default="cuda:0" if torch.cuda.is_available() else "cpu")
     parser.add_argument("--dtype", type=str, default="bfloat16")
     parser.add_argument("--use_wandb", action="store_true")
     parser.add_argument("--wandb_project", type=str, default="MiniMind-Full-SFT")
     parser.add_argument("--num_workers", type=int, default=1)
     parser.add_argument("--ddp", action="store_true")
-    parser.add_argument("--accumulation_steps", type=int, default=1)
+    parser.add_argument("--accumulation_steps", type=int, default=8) #1
     parser.add_argument("--grad_clip", type=float, default=1.0)
     parser.add_argument("--warmup_iters", type=int, default=0)
     parser.add_argument("--log_interval", type=int, default=100)
